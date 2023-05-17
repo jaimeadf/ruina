@@ -109,22 +109,24 @@ args = parser.parse_args()
 print('Lendo configuração...')
 config = read_config()
 
-try:
-    print('Logando no aplicativo...')
-    access_token = login(args.username, args.password)
-except Exception as exception:
-    print(f'Falha ao logar: {str(exception)}')
-else:
-    print('Procurando refeições para serem agendadas amanhã...')
+print('Procurando refeições para serem agendadas amanhã...')
+now = datetime.now(pytz.timezone('Brazil/East'))
+tomorrow = now + timedelta(1)
 
-    now = datetime.now(pytz.timezone('Brazil/East'))
-    tomorrow = now + timedelta(1)
+tomorrow_schedules = find_schedules(tomorrow)
 
-    tomorrow_schedules = find_schedules(tomorrow)
-    failed = False
+if len(tomorrow_schedules) != 0:
+    print(f'Encontrado {len(tomorrow_schedules)} refeição(s) para serem agendadas.')
 
-    for schedule in tomorrow_schedules:
-        if is_weekday(tomorrow, schedule['weekday']):
+    try:
+        print('Logando no aplicativo...')
+        access_token = login(args.username, args.password)
+    except Exception as exception:
+        print(f'Falha ao logar: {str(exception)}')
+    else:
+        failed = False
+
+        for schedule in tomorrow_schedules:
             print(f"Agendando refeições para o RU {schedule['restaurant']}... ({schedule})")
 
             data = schedule_meal(access_token, tomorrow, tomorrow, schedule)
@@ -142,8 +144,8 @@ else:
                     print('[Erro] ' + message + meal['impedimento'] + '.')
                     failed = True
 
-    if len(tomorrow_schedules) == 0:
-        print('Não há nenhuma refeição para ser agendada amanhã.')
+        if failed:
+            sys.exit(1)
+else:
+    print('Não há nenhuma refeição para ser agendada amanhã.')
 
-    if failed:
-        sys.exit(1)
