@@ -129,19 +129,19 @@ if len(tomorrow_schedules) != 0:
         for schedule in tomorrow_schedules:
             print(f"Agendando refeições para o RU {schedule['restaurant']}... ({schedule})")
 
-            data = schedule_meal(access_token, tomorrow, tomorrow, schedule)
+            statuses = schedule_meal(access_token, tomorrow, tomorrow, schedule)
 
-            for meal in data:
-                date = datetime.strptime(meal['dataRefAgendada'], '%Y-%m-%d %H:%M:%S')
+            for status in statuses:
+                date = datetime.strptime(status['dataRefAgendada'], '%Y-%m-%d %H:%M:%S')
                 message = (
                     f"{date.strftime('%d/%m/%Y')} - "
-                    f"RU {schedule['restaurant']} ({meal['tipoRefeicao']}): "
+                    f"RU {schedule['restaurant']} ({status['tipoRefeicao']}): "
                 )
 
-                if meal['sucesso']:
+                if status['sucesso']:
                     print(message + 'Agendado com sucesso.')
                 else:
-                    print('[Erro] ' + message + meal['impedimento'] + '.')
+                    print('[Erro] ' + message + status['impedimento'] + '.')
                     failed = True
 
         if failed:
