@@ -1,0 +1,27 @@
+environment:
+  app: UFSMDigital
+  device-id: d4db6216-31d2-4bfa-ab64-02a4fc8ef7e6
+  device-info: Apple iPhone ios:15.7.3
+  message-token: c7ptbA7De0nvnvagiGEgbC:APA91bE1AABlRKEjUB_HCB_yVKmocYxOgym2ebWlpP6hCjMYpTcgiTMiKTu7KZgTMLIrv55SieM0fLqWBIiMLULrwTDISoszte9zMAVaMfQqt9cxAHaxJ47moYT628v9JMBQftaLVxKm
+
+schedules:
+  - weekday: Tue
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Thu
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Fri
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
