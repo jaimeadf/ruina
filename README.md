@@ -14,9 +14,11 @@ mandará um e-mail para você avisando que o script falhou.
     - `Username`: Contendo sua matrícula da UFSM.
     - `Password`: Contendo sua senha da UFSM.
     - As secrets somente podem ser alteradas. Nem ninguém nem mesmo você terá acesso ao valor depois de adicionada.
-    ![settings-guide](https://github.com/jaimeadf/agendator/assets/40345645/5c34a716-37b4-4828-9df6-f7b9d9b9d4e0)
+
+    ![settings-guide](https://github.com/jaimeadf/agendator/assets/40345645/0641bf03-d5fd-45ad-9193-27dbaa8fe76d)
 4. Dentro da aba `Actions`, clique em ativar workflows.
-    ![actions-guide](https://github.com/jaimeadf/agendator/assets/40345645/dbfa72fc-fa3e-4aad-86a6-01c37faf53ed)
+
+    ![actions-guide](https://github.com/jaimeadf/agendator/assets/40345645/d1efb8c1-6ccf-47c5-95cc-cd48a885c71c)
 6. Pronto, agora diariamente o Agendator irá executar e agendar as suas refeições do dia seguinte. Você pode ver as logs e
 executá-lo manualmente na aba `Actions`.
 
