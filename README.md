@@ -24,7 +24,7 @@ executá-lo manualmente na aba `Actions`.
 A configuração é feita a partir da edição do arquivo [config.yaml](config.yaml) que contém as seguintes opções:
 
 ### Environment
-> ⚠️ Não é recomendado alterar as configurações dessa seção. As informações padrões foram obtida
+> ⚠️ Não é recomendado alterar as configurações dessa seção. As informações padrões foram obtidas
 > a partir da engenharia reversa do aplicativo UFSMDigital.
 
 - `app`: O nome do aplicativo realizando o log in.
