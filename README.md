@@ -36,7 +36,7 @@ A configuração é feita a partir da edição do arquivo [config.yaml](config.y
 A seção de `schedules` permite você definir uma lista de cronogramas para diferentes dias da semana.
 Cada cronograma consiste nas seguintes opções:
 - `weekday`: O dia da semana para o cronograma (por exemplo, "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
-- `restaraunt`: O restaraunte associado ao agendamento (1 para o RU I e 2 para o RU II).
+- `restaurant`: O restaurante associado ao agendamento (1 para o RU I e 2 para o RU II).
 - `vegetarian`: Se o agendamento será com a opção vegetariana (true ou false).
 - `coffee`: Se o agendamente inclui o café da manhã (true ou false).
 - `lunch`: Se o agendamento inclui o almoço (true ou false).
