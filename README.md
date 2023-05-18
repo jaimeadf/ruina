@@ -4,7 +4,8 @@ Ruina Is Not an Agendator
 Um script feito em [Python](https://www.python.org) para automaticamente agendar suas refeições nos restaurantes universitários da [UFSM](https://www.ufsm.br).
 
 ## Como funciona?
-Ruína executa diariamente as 7 horas da manhã utilizando o [GitHub Actions](https://github.com/features/actions).
+Ruína 
+a diariamente as 7 horas da manhã utilizando o [GitHub Actions](https://github.com/features/actions).
 Ele lê seu cronograma definido no arquivo `config.yaml` e, por meio do aplicativo da UFSM, agenda todas as refeições
 programadas para o dia posterior. Além disso, sempre que ocorrer algum erro durante os agendamentos, o [GitHub](https://github.com)
 mandará um e-mail para você avisando que o script falhou.
@@ -16,11 +17,13 @@ mandará um e-mail para você avisando que o script falhou.
     - `Username`: Contendo sua matrícula da UFSM.
     - `Password`: Contendo sua senha da UFSM.
     - As secrets somente podem ser alteradas. Nem ninguém nem mesmo você terá acesso ao valor depois de adicionada.
-    ![settings-guide](https://github.com/jaimeadf/agendator/assets/40345645/0641bf03-d5fd-45ad-9193-27dbaa8fe76d)
+    ![secrets-guide](https://github.com/jaimeadf/ruina/assets/40345645/5dbf88a6-238e-4bf2-a1d5-679ee9284dfe)
 4. Dentro da aba `Actions`, clique em ativar workflows.
-    ![actions-guide](https://github.com/jaimeadf/agendator/assets/40345645/d1efb8c1-6ccf-47c5-95cc-cd48a885c71c)
-6. Pronto, a partir de agora, Ruína irá executar diariamente e agendar as suas refeições do dia seguinte. Você pode ver as logs e
-executá-lo manualmente na aba `Actions`.
+    ![enable-actions-guide](https://github.com/jaimeadf/ruina/assets/40345645/51d51b12-948b-4ff0-a651-b8e60fa01995)
+6. Depois, ainda dentro dessa aba, clique em `Ruina` e ativar.
+    ![enable-workflow-guide](https://github.com/jaimeadf/ruina/assets/40345645/c3a42713-0a4a-4e2f-b156-9693c62dbae4)
+8. Pronto, a partir de agora, Ruína irá executar diariamente e agendar as suas refeições do dia seguinte. Você pode ver as logs e
+executá-la manualmente na aba `Actions`.
 
 ## Configuração
 A configuração é feita a partir da edição do arquivo [config.yaml](config.yaml) que contém as seguintes opções:
