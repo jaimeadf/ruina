@@ -97,7 +97,7 @@ def find_schedules(date):
     return list(filtered_schedules)
 
 parser = ArgumentParser(
-    prog='agendator',
+    prog='ruina',
     description='Agenda automaticamente as refeições do RU da UFSM.'
 )
 
