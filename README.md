@@ -16,7 +16,7 @@ mandará um e-mail para você avisando que o script falhou.
 3. Dentro da aba `Settings`, seção `Secret and Variables` e item `Actions`, adicione duas secrets:
     - `Username`: Contendo sua matrícula da UFSM.
     - `Password`: Contendo sua senha da UFSM.
-    - As secrets somente podem ser alteradas. Nem ninguém nem mesmo você terá acesso ao valor depois de adicionada.
+    - As secrets são variáveis privadas que somente podem ser alteradas. Nem ninguém, nem mesmo você terá acesso ao seu valor, depois de adicionada.
     ![secrets-guide](https://github.com/jaimeadf/ruina/assets/40345645/5dbf88a6-238e-4bf2-a1d5-679ee9284dfe)
 4. Dentro da aba `Actions`, clique em ativar workflows.
     ![enable-actions-guide](https://github.com/jaimeadf/ruina/assets/40345645/51d51b12-948b-4ff0-a651-b8e60fa01995)
@@ -24,6 +24,8 @@ mandará um e-mail para você avisando que o script falhou.
     ![enable-workflow-guide](https://github.com/jaimeadf/ruina/assets/40345645/c3a42713-0a4a-4e2f-b156-9693c62dbae4)
 8. Pronto, a partir de agora, Ruína irá executar diariamente e agendar as suas refeições do dia seguinte. Você pode ver as logs e
 executá-la manualmente na aba `Actions`.
+
+> Por favor, sempre que não for almoçar, cancele o agendamento ou disponibilize a refeição.
 
 ## Configuração
 A configuração é feita a partir da edição do arquivo [config.yaml](config.yaml) que contém as seguintes opções:
